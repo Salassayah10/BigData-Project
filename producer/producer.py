@@ -7,7 +7,7 @@ def json_serializer(data):
 
 # Création du producer qui pointe vers notre cluster Kafka (localhost:9092)
 producer = KafkaProducer(
-    bootstrap_servers=['localhost:9092'],
+    bootstrap_servers=['kafka:9092'],
     value_serializer=json_serializer
 )
 
