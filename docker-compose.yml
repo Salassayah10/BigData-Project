@@ -30,7 +30,7 @@ services:
     command: python -u producer.py
 
   consumer:
-    build: ./consumer # Fixed: changed from ./producer to ./consumer
+    build: ./consumer 
     volumes:
       - ./consumer:/app
     depends_on:
@@ -38,5 +38,6 @@ services:
     environment:
       KAFKA_BROKER: kafka:9092
     command: python -u consumer.py
+
 
 
